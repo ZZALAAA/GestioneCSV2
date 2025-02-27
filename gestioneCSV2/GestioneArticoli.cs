@@ -5,15 +5,16 @@ using System.Linq;
 
 public class GestioneArticoli
 {
-    public ObservableCollection<Articolo> ElencoArticoli { get; }
+   //public ObservableCollection<Articolo> ElencoArticoli { get; }
 
     public GestioneArticoli()
     {
-        ElencoArticoli = new ObservableCollection<Articolo>();
     }
 
-    public int LeggiDati()
+    public List<Articolo> LeggiDati()
     {
+        List<Articolo> ElencoArticoli = new List<Articolo>();
+
         int numeroRighe = 0;
         bool intestazione = true;
 
@@ -53,6 +54,6 @@ public class GestioneArticoli
             }
         }
 
-        return numeroRighe;
+        return ElencoArticoli;
     }
 }

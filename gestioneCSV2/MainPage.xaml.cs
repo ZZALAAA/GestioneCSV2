@@ -11,15 +11,16 @@ namespace gestioneCSV2
         public MainPage()
         {
             InitializeComponent();
-            _gestioneArticoli = new GestioneArticoli();
-            Articoli = _gestioneArticoli.ElencoArticoli;
+
         }
         private void OnLoadCsvClicked(object sender, EventArgs e)
         {
             try
             {
-                int numeroRighe = _gestioneArticoli.LeggiDati();
-                LblNumeroRighe.Text = $"Numero di righe lette: {numeroRighe}";
+                _gestioneArticoli = new GestioneArticoli();
+                List<Articolo> ListaDiArticoli= _gestioneArticoli.LeggiDati();
+                ListaArticoli.ItemsSource = ListaDiArticoli;
+
             }
             catch (Exception eccezione)
             {
