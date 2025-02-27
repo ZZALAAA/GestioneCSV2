@@ -22,14 +22,18 @@
                         <Frame Margin="0,5" Padding="10">
                             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                                 <Label Text="{Binding ID}" 
-                                   FontSize="16" />
+                                   FontSize="16" 
+                                   Padding="10,0,10,0"/>
                                 <Label Text="{Binding Nome}" 
                                    FontSize="16"
-                                   FontAttributes="Bold"/>
+                                   FontAttributes="Bold"
+                                   Padding="10,0,10,0"/>
                                 <Label Text="{Binding Prezzo}" 
-                                   FontSize="16"/>
+                                   FontSize="16"
+                                   Padding="10,0,10,0"/>
                                 <Label Text="{Binding Quantità}" 
-                                   FontSize="16"/>
+                                   FontSize="16"
+                                   Padding="10,0,10,0"/>
                             </StackLayout>
                         </Frame>
                     </ScrollView>
