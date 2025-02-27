@@ -1,0 +1,9 @@
+ID,Nome,Prezzo,Quantità
+
+1,Penna,1.50,100
+
+2,Matita,0.80,200
+
+3,Quaderno,2.50,50
+
+4,Gomma,0.50,300

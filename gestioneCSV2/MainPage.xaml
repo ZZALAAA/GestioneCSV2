@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gestioneCSV2.MainPage">
+
+
+    <StackLayout 
+    Padding="10">
+
+        <Button Text="Load CSV" Clicked="OnLoadCsvClicked"/>
+
+        <Label x:Name="LblNumeroRighe" Text="Numero di articoli: 0" Margin="0,10,0,0"/>
+
+        <CollectionView x:Name="ListaArticoli"
+           Grid.Row="0"
+           SelectionMode="Single"
+           MinimumHeightRequest="400">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ScrollView>
+                        <Frame Margin="0,5" Padding="10">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding ID}" 
+                                   FontSize="16" />
+                                <Label Text="{Binding Nome}" 
+                                   FontSize="16"
+                                   FontAttributes="Bold"/>
+                                <Label Text="{Binding Prezzo}" 
+                                   FontSize="16"/>
+                                <Label Text="{Binding Quantità}" 
+                                   FontSize="16"/>
+                            </StackLayout>
+                        </Frame>
+                    </ScrollView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+
+
+</ContentPage>
